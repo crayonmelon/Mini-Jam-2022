@@ -25,5 +25,17 @@ public class GameManager : MonoBehaviour
     internal void ChangeHeath(int health)
     {
         Health += health;
+
+        if (Health <= 0 )
+        {
+            Died();
+        }
     }
+
+    private void Died()
+    {
+        Debug.Log("DIED DIED DIED DIED DIED");
+    }
+
+
 }
