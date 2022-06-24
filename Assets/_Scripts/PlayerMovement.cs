@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private float movementSpeed = 5f;
     private Vector3 currentVelocity = Vector3.zero;
+    private Vector2 moveDir;
 
     private void Awake()
     {
@@ -25,16 +26,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        rb.AddForce(moveDir * movementSpeed, ForceMode.VelocityChange);
     }
 
     public void HandleMoveInput(InputAction.CallbackContext context)
-    {
-        if(context.performed)
+    { 
+        if(context.started)
         {
-            Vector2 moveDir = context.ReadValue<Vector2>();
-            
-            rb.AddForce(moveDir * movementSpeed, ForceMode.VelocityChange);
+            moveDir = context.ReadValue<Vector2>();    
+            moveDir 
+        }
+        else if (context.canceled)
+        {
+            moveDir = Vector2.zero;
         }
     }
 }
