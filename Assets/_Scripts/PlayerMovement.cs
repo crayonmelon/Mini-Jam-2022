@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private float movementSpeed = 5f;
     private Vector3 currentVelocity = Vector3.zero;
-    private Vector2 moveDir;
+    private Vector3 moveDir;
 
     private void Awake()
     {
@@ -26,15 +28,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddForce(moveDir * movementSpeed, ForceMode.VelocityChange);
+        rb.velocity = (moveDir * movementSpeed);
     }
 
     public void HandleMoveInput(InputAction.CallbackContext context)
     { 
-        if(context.started)
+        if(context.performed)
         {
-            moveDir = context.ReadValue<Vector2>();    
-         //   moveDir 
+            Vector2 inputDir = context.ReadValue<Vector2>();
+            print(inputDir);
+            moveDir = new Vector3(inputDir.x, 0f, inputDir.y);
         }
         else if (context.canceled)
         {
