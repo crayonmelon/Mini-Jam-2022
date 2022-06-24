@@ -7,14 +7,16 @@ public class BumRushEnemy : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    [SerializeField] private Transform target;
+    private Transform target;
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
+        transform.eulerAngles = new Vector3(0,0,0);
         agent.SetDestination(target.position);
     }
 }

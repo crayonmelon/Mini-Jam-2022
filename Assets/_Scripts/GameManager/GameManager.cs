@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager GM { get { return _GM; } }
     public int Health = 100;
 
-    public int Level = 0;
+    public int currentLevel = 0;
+
+    public Level[] levels;
 
     void Awake()
     {
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         Health += health;
 
-        if (Health <= 0 )
+        if (Health <= 0)
         {
             Died();
         }
@@ -37,5 +39,22 @@ public class GameManager : MonoBehaviour
         Debug.Log("DIED DIED DIED DIED DIED");
     }
 
+    internal void AddEnemy(GameObject enemy)
+    {
+        foreach (var level in levels)
+        {
+            if (level.ID == currentLevel)
+            {
+                level.Enemies.Add(enemy);
+            }
+        }
+    }
+}
 
+[System.Serializable]
+public class Level {
+    [SerializeField]
+    internal int ID;
+    [SerializeField]
+    internal List<GameObject> Enemies;
 }

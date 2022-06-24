@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if(context.started)
         {
             moveDir = context.ReadValue<Vector2>();    
-            moveDir 
+         //   moveDir 
         }
         else if (context.canceled)
         {
