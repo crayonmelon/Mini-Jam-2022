@@ -1,18 +1,25 @@
-﻿using UnityEngine;
-    public class EnemyStats : MonoBehaviour
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+public class EnemyStats : MonoBehaviour
+{
+    [SerializeField] private int health = 100;
+
+    public void takeDamage(int damage)
     {
-        private int health = 100;
-        private int maxHealth = 100;
+        health -= damage;
 
-        public void takeDamage(int damage)
+        print($"ooo owie ouch  taken: {damage} left: {health}");
+     
+        if (health <= 0)
         {
-            health -= damage;
-
-            print($"ooo owie ouch  taken: {damage}   left: {health}");
-            
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
+            Death();
         }
     }
+
+    private void Death()
+    {
+        GameManager.GM.RemoveEnemy(this.gameObject);
+        Destroy(gameObject);
+    }
+}

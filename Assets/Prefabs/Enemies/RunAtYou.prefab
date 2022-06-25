@@ -93,7 +93,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5606103618681130010}
-  - component: {fileID: 5606103618681130009}
   - component: {fileID: 5606103618681130013}
   - component: {fileID: 5606103618681130012}
   - component: {fileID: 1232158174}
@@ -101,6 +100,7 @@ GameObject:
   - component: {fileID: 485623773}
   - component: {fileID: 485623775}
   - component: {fileID: 1750759550}
+  - component: {fileID: 1384660503}
   m_Layer: 0
   m_Name: RunAtYou
   m_TagString: EnemyHitbox
@@ -124,20 +124,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &5606103618681130009
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5606103618681130006}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &5606103618681130013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -321,3 +307,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d49a268d43405799a2e3b04b7b9cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &1384660503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606103618681130006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abc59835d1247040a9067039d903afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackForce: 1
