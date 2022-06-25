@@ -1570,6 +1570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004149160}
   - component: {fileID: 2004149161}
+  - component: {fileID: 4771020794900699713}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Player
@@ -1644,6 +1645,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4771020794900699713
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004149159}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b54a025d48c6d48479bcbddf8ce2b43a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2034982055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,6 +1789,7 @@ GameObject:
   - component: {fileID: 772825871}
   - component: {fileID: 6767359967904633744}
   - component: {fileID: 772825879}
+  - component: {fileID: 1003965537642495668}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2036,3 +2058,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628077e90584a3c42a9d671ee73e2176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1003965537642495668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821834509705789066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f5f737fa77e944ba83a43599b63258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingForward: {fileID: 9100000, guid: b54a025d48c6d48479bcbddf8ce2b43a, type: 2}
+  sideOn: {fileID: 9100000, guid: 274090bba211777469b8a626f639c5e6, type: 2}
+  facingBackward: {fileID: 9100000, guid: 05c8f073527d90344b122f1d8c85e354, type: 2}
