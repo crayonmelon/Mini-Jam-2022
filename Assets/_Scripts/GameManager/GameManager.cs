@@ -110,7 +110,14 @@ public class GameManager : MonoBehaviour
         //Fall SpriteRemoved
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = false;
         GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = false;
-        GameObject.FindWithTag("Player").transform.position = new Vector3(0, 63, 0) + new Vector3(0, returnLevelPlane().y, 0); ;
+
+        foreach (var level in levels)
+        {
+            if (level.ID == currentLevel)
+            {
+                GameObject.FindWithTag("Player").transform.position = level.levelSpawn;
+            }
+        }
         GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
     }
 
@@ -139,15 +146,23 @@ public class GameManager : MonoBehaviour
 
 
     }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        foreach (Level level in levels)
+            Gizmos.DrawCube(level.levelSpawn, new Vector3(1, 1, 1));
+    }
 }
 
 [System.Serializable]
-public class Level {
+public class Level{
     [SerializeField]
     internal int ID;
     [SerializeField]
     internal string levelText;
     [SerializeField]
     internal List<GameObject> Enemies;
-
+    [SerializeField]
+    internal Vector3 levelSpawn;
 }

@@ -10,7 +10,7 @@ public class BloodBank : MonoBehaviour
     [SerializeField] private float donateRate = 5;
     [SerializeField] private MeshRenderer blood;
     private float currentBlood = 0f;
-    private float capacity = 100f;
+    [SerializeField] private float capacity = 100f;
     [SerializeField] private TMPro.TextMeshProUGUI progressText;
     public GameObject prompt;
 
@@ -35,6 +35,12 @@ public class BloodBank : MonoBehaviour
             blood.material.SetFloat("_Progress", (currentBlood / capacity)*2);
 
             progressText.text = $"Blood Gate\n{(currentBlood / capacity) * 100}%";
+        }
+
+        if (full)
+        {
+            GameManager.GM.fallInToNextLevel();
+            Destroy(gameObject);
         }
     }
 }
