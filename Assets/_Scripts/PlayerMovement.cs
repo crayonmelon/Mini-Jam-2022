@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed)
         {
             Physics.Raycast(Camera.main.ScreenPointToRay(context.ReadValue<Vector2>()), out RaycastHit hitInfo,
-                mouseLookLayer);
+                Mathf.Infinity, mouseLookLayer);
 
             lookPivot.transform.LookAt(hitInfo.point);
             lookPivot.SetEulerAngle(x: 0);

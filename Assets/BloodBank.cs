@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,19 @@ public class BloodBank : MonoBehaviour
     private float currentBlood = 0f;
     private float capacity = 100f;
     [SerializeField] private TMPro.TextMeshProUGUI progressText;
+    public GameObject prompt;
+
+    private void Awake()
+    {
+        prompt.SetActive(false);
+    }
 
     void FixedUpdate()
     {
         if (donating && !full)
         {
             currentBlood += donateRate;
+            GameManager.GM.ChangeHeath(-(int)donateRate);
 
             if (currentBlood >= capacity)
             {
@@ -24,7 +32,7 @@ public class BloodBank : MonoBehaviour
                 full = true;
             }
 
-            blood.material.SetFloat("_Progress", currentBlood / capacity);
+            blood.material.SetFloat("_Progress", (currentBlood / capacity)*2);
 
             progressText.text = $"Blood Gate\n{(currentBlood / capacity) * 100}%";
         }

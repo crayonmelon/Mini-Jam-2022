@@ -16,6 +16,8 @@ public class BloodPlease : MonoBehaviour
         {
             viableDonor = true;
             friendlyLocalCreditUnion = other.GetComponent<BloodBank>();
+            friendlyLocalCreditUnion.prompt.SetActive(true);
+            Debug.Log("prompting", this.transform);
         }
     }
     
@@ -25,6 +27,7 @@ public class BloodPlease : MonoBehaviour
         {
             viableDonor = false;
             friendlyLocalCreditUnion.donating = false;
+            friendlyLocalCreditUnion.prompt.SetActive(false);
         }
     }
 
