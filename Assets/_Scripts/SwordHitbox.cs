@@ -8,4 +8,5 @@
             {
                 other.GetComponent<EnemyStats>().takeDamage(10);
             }
-        }    }
+        }    
+    }
