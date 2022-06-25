@@ -5,11 +5,14 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] int level = 4;
-    [SerializeField] GameObject spawnee;
+    [SerializeField] List<SpawnChance> spawnees;
+
     [SerializeField] float min = 1f;
     [SerializeField] float max = 2f;
     void Start()
     {
+       /* spawnees.Sort(SpawnChance.)*/
+
         StartCoroutine(SpawnLoop());
     }
 
@@ -20,7 +23,26 @@ public class Spawner : MonoBehaviour
         while (GameManager.GM.currentLevel == level)
         {
             yield return new WaitForSeconds(Random.Range(min, max));
-            Instantiate(spawnee, transform.position, transform.rotation);
+            float ran = Random.Range(0f, 1f);
+
+            foreach (SpawnChance spawnee in spawnees)
+            {
+                if (spawnee.spawnChange >= ran)
+                {
+                    Instantiate(spawnee.spawnee, transform.position, transform.rotation);
+                    break;
+                }
+            }
         }
     }
+
+    [System.Serializable]
+    private class SpawnChance
+    {
+        [SerializeField] internal GameObject spawnee;
+
+        [Range(0f,1f)]
+        [SerializeField] internal float spawnChange;
+    }
+
 }

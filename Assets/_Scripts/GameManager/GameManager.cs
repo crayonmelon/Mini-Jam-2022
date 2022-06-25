@@ -116,14 +116,32 @@ public class GameManager : MonoBehaviour
             if (level.ID == currentLevel)
             {
                 GameObject.FindWithTag("Player").transform.position = level.levelSpawn;
+            }
+        }
 
+        EnablingAndDisabling();
+
+        GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
+    }
+
+    private void EnablingAndDisabling()
+    {
+        foreach (var level in levels)
+        {
+            if (level.ID == currentLevel)
+            {
                 foreach (var obj in level.enableThese)
                 {
                     obj.SetActive(true);
                 }
+            } else
+            {
+                foreach (var obj in level.enableThese)
+                {
+                    obj.SetActive(false);
+                }
             }
         }
-        GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
     }
 
     internal void DisplaylevelText()
