@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int maxHealth = 1000;
     public int Health = 100;
 
-    public int currentLevel = 0;
+    public int currentLevel = 4;
 
     public Level[] levels;
 
@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
             _GM = this;
         }
         StartNewLevel();
+        Invoke("fallInToNextLevel", 5); //Please delete me
     }
 
     internal void ChangeHeath(int health)
@@ -70,10 +71,39 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    internal void fallInToNextLevel()
+    {
+      GameObject[] enemies =  GameObject.FindGameObjectsWithTag("EnemyHitbox");
+        for (int i = 0; i < enemies.Length; i ++)
+        {
+          Destroy(  enemies[i]);
+        }
+        GameObject.FindWithTag("fallSprite").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = true;
+        GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = true;
+        GameObject.FindWithTag("fallSprite").transform.position = new Vector3(0, 63, 0); 
+        GameObject.FindWithTag("fallSprite").transform.position += returnLevelPlane();
+        GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = false;
+
+
+    }
+
+    public Vector3 returnLevelPlane() //Every Next Level is -60 on the y axis from the last one
+    { //Please Move this function somewhere else
+        return new Vector3 (0, (4 - currentLevel ) * -60, 0); //Magic number 4 is just the starting floor number which in turn dictates the total amount of floor
+    }
 
     internal void StartNewLevel()
     {
         DisplaylevelText();
+        currentLevel--;
+        GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = false;
+        GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = false;
+     
+        GameObject.FindWithTag("Player").transform.position = new Vector3(0, 63, 0) + new Vector3(0, returnLevelPlane().y, 0); ;
+        
+       
+        GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
     }
 
     internal void DisplaylevelText()

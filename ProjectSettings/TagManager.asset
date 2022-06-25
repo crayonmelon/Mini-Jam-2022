@@ -6,6 +6,9 @@ TagManager:
   tags:
   - EnemyHitbox
   - Sword
+  - Undefined
+  - fallSprite
+  - fallDownCamera
   layers:
   - Default
   - TransparentFX
