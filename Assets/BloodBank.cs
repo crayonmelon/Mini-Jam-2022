@@ -39,6 +39,7 @@ public class BloodBank : MonoBehaviour
 
         if (full)
         {
+            Debug.Log("OHNO");
             GameManager.GM.fallInToNextLevel();
             Destroy(gameObject);
         }
