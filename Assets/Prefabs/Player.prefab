@@ -1988,9 +1988,37 @@ MonoBehaviour:
     m_ActionId: c5afb9d0-2f47-4dbf-a221-db43f7029b17
     m_ActionName: Gameplay/Melee[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 913940089}
+        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
+        m_MethodName: HandleShootInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 632abf8d-dea3-44ef-bccc-522b809133ac
     m_ActionName: Gameplay/Shoot[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 772825879}
+        m_TargetAssemblyTypeName: BloodPlease, Assembly-CSharp
+        m_MethodName: HandleDonationInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: af6922da-07c1-4bcd-a798-3ea3abae99a0
+    m_ActionName: Gameplay/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
