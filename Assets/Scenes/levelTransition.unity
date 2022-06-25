@@ -11505,17 +11505,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3140771868276303882, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 864ce5c879f57de479bda975f92b4c46, type: 2}
-    - target: {fileID: 5606103617688573540, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -323801575, guid: 4f9cf64f3d3a76a478d1e63ddf01fd46,
-        type: 3}
     - target: {fileID: 5606103618681130006, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
         type: 3}
       propertyPath: m_Name
@@ -11576,9 +11565,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3140771868276303882, guid: 3e27a7eeb966aa44c8303aaac8f5396c, type: 3}
-    - {fileID: 4133764462599525793, guid: 3e27a7eeb966aa44c8303aaac8f5396c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e27a7eeb966aa44c8303aaac8f5396c, type: 3}
 --- !u!1 &962862275
 GameObject:
@@ -11616,9 +11603,13 @@ MonoBehaviour:
   - ID: 0
     levelText: 
     Enemies: []
+    levelSpawn: {x: 0, y: 0, z: 0}
+    enableThese: []
   - ID: 1
     levelText: 
     Enemies: []
+    levelSpawn: {x: 0, y: 0, z: 0}
+    enableThese: []
   TextCanvas: {fileID: 0}
 --- !u!4 &962862277
 Transform:
@@ -20407,32 +20398,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1502303964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5606103617688573539, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
-    type: 3}
-  m_PrefabInstance: {fileID: 901837406}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1502303967
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502303964}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 864ce5c879f57de479bda975f92b4c46, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1544376770
 GameObject:
   m_ObjectHideFlags: 0
@@ -20462,10 +20427,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52b5ad60d11d3f4a93c9aafd516d5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 4
   spawnee: {fileID: 5606103618681130006, guid: 9026a31e25756734dbdab98e9a19272a, type: 3}
   min: 1
   max: 2
-  maxSpawn: 5
 --- !u!4 &1544376772
 Transform:
   m_ObjectHideFlags: 0
