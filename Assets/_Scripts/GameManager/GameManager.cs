@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public Level[] levels;
 
+    [SerializeField] GameObject TextCanvas;
+
     void Awake()
     {
         if (_GM != null && _GM != this)
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
         {
             _GM = this;
         }
+        StartNewLevel();
     }
 
     internal void ChangeHeath(int health)
@@ -51,6 +54,48 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    internal void RemoveEnemy(GameObject enemy)
+    {
+        foreach (var level in levels)
+        {
+            if (level.ID == currentLevel)
+            {
+                level.Enemies.Remove(enemy);
+            }
+        }
+    }
+
+    internal void StartNewLevel()
+    {
+        DisplaylevelText();
+    }
+
+    internal void DisplaylevelText()
+    {
+        StartCoroutine(TextDisplayEvent());
+    }
+
+    IEnumerator TextDisplayEvent()
+    {
+        TextCanvas.SetActive(true);
+
+        string titleText= "";
+
+        foreach (var level in levels)
+        {
+            if (level.ID == currentLevel)
+            {
+                titleText = level.levelText;
+            }
+        }
+
+        TextCanvas.GetComponent<UpdateDisplayText>().SetText(currentLevel, titleText);
+        yield return new WaitForSeconds(2f);
+        TextCanvas.SetActive(false);
+
+
+    }
 }
 
 [System.Serializable]
@@ -58,5 +103,8 @@ public class Level {
     [SerializeField]
     internal int ID;
     [SerializeField]
+    internal string levelText;
+    [SerializeField]
     internal List<GameObject> Enemies;
+
 }
