@@ -11,9 +11,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     
     [SerializeField] private float movementSpeed = 5f;
-    private Vector3 currentVelocity = Vector3.zero;
     private Vector3 moveDir;
 
+    [Header("Ground Checks")] 
+    [SerializeField] private LayerMask groundLayer;
+    private bool rightCheck, leftCheck, upCheck, downCheck;
+
+    [SerializeField] private Transform up, down, left, right;
+    
     [Header("Mouse Look")] 
     [SerializeField] private Transform lookPivot;
     [SerializeField] private LayerMask mouseLookLayer;
@@ -29,10 +34,27 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        GroundChecks();
+    }
+
     void FixedUpdate()
     {
+        if (moveDir.x > 0 && !rightCheck) moveDir = moveDir.With(x: 0);
+        else if (moveDir.x < 0 && !leftCheck) moveDir = moveDir.With(x: 0);
+        if (moveDir.z > 0 && !upCheck) moveDir = moveDir.With(z: 0);
+        else if (moveDir.z < 0 && !downCheck) moveDir = moveDir.With(z: 0);
+        
         rb.velocity = (moveDir * movementSpeed);
+    }
+
+    private void GroundChecks()
+    {
+        rightCheck = Physics.Raycast(right.position, Vector3.down, 3f, groundLayer);
+        leftCheck = Physics.Raycast(left.position, Vector3.down, 3f, groundLayer);
+        upCheck = Physics.Raycast(up.position, Vector3.down, 3f, groundLayer);
+        downCheck = Physics.Raycast(down.position, Vector3.down, 3f, groundLayer);
     }
 
     public void HandleMoveInput(InputAction.CallbackContext context)
