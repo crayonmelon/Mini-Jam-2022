@@ -17,7 +17,7 @@ public class KnockBack : MonoBehaviour
     IEnumerator knockBack()
     {
         Vector3 dir = (this.transform.position - GameObject.FindGameObjectWithTag("Player").transform.position).normalized;
-        Vector3 newPos = (transform.position + dir * knockBackForce);
+        Vector3 newPos = (transform.position + dir.With(y:0) * knockBackForce);
 
         float timeElapsed = 0;
 

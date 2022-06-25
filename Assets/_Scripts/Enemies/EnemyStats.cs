@@ -4,8 +4,9 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     [SerializeField] private int health = 100;
-
-    public void takeDamage(int damage)
+    [SerializeField] private int healthBack = 1;
+    public enum AttackType { Bullet, Sword }
+    public void takeDamage(int damage, AttackType attackType)
     {
         health -= damage;
 
@@ -13,13 +14,23 @@ public class EnemyStats : MonoBehaviour
      
         if (health <= 0)
         {
-            Death();
+            Death(attackType);
         }
     }
 
-    private void Death()
+    private void Death(AttackType attackType)
     {
         GameManager.GM.RemoveEnemy(this.gameObject);
+
+        if (attackType == AttackType.Sword)
+        {
+            GameManager.GM.ChangeHeath(healthBack);
+        }
+        else if (attackType == AttackType.Bullet)
+        {
+            GameManager.GM.ChangeHeath(healthBack / 4);
+        }
+
         Destroy(gameObject);
     }
 }

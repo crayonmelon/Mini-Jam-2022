@@ -6,7 +6,7 @@
         {
             if (other.CompareTag("EnemyHitbox"))
             {
-                other.GetComponent<EnemyStats>().takeDamage(10);
+                other.GetComponent<EnemyStats>().takeDamage(10, EnemyStats.AttackType.Sword);
             }
         }    
     }
