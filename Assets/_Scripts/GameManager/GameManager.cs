@@ -26,8 +26,7 @@ public class GameManager : MonoBehaviour
         {
             _GM = this;
         }
-        StartNewLevel();
-        Invoke("fallInToNextLevel", 5); //Please delete me
+        DisplaylevelText();
     }
 
     internal void ChangeHeath(int health)
@@ -71,21 +70,32 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    internal void fallInToNextLevel()
+
+    internal void DestroyLevelEnemies()
     {
-      GameObject[] enemies =  GameObject.FindGameObjectsWithTag("EnemyHitbox");
-        for (int i = 0; i < enemies.Length; i ++)
+        foreach (var level in levels)
         {
-          Destroy(  enemies[i]);
+            if (level.ID == currentLevel)
+            {
+                foreach (GameObject enemy in level.Enemies)
+                {
+                    Destroy(enemy);
+                }
+                level.Enemies.Clear();
+            }
         }
+    }
+
+    public void fallInToNextLevel()
+    {
+        DestroyLevelEnemies();
+
         GameObject.FindWithTag("fallSprite").GetComponent<SpriteRenderer>().enabled = true;
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = true;
         GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = true;
         GameObject.FindWithTag("fallSprite").transform.position = new Vector3(0, 63, 0); 
         GameObject.FindWithTag("fallSprite").transform.position += returnLevelPlane();
         GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = false;
-
-
     }
 
     public Vector3 returnLevelPlane() //Every Next Level is -60 on the y axis from the last one
@@ -93,16 +103,14 @@ public class GameManager : MonoBehaviour
         return new Vector3 (0, (4 - currentLevel ) * -60, 0); //Magic number 4 is just the starting floor number which in turn dictates the total amount of floor
     }
 
-    internal void StartNewLevel()
+    public void StartNewLevel()
     {
-        DisplaylevelText();
         currentLevel--;
+        DisplaylevelText();
+        //Fall SpriteRemoved
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = false;
         GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = false;
-     
         GameObject.FindWithTag("Player").transform.position = new Vector3(0, 63, 0) + new Vector3(0, returnLevelPlane().y, 0); ;
-        
-       
         GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
     }
 

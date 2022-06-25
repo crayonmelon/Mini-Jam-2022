@@ -11,6 +11,7 @@ public class KnockBack : MonoBehaviour
     {
         if (other.CompareTag("Sword"))
         {
+            StopAllCoroutines();
             StartCoroutine(knockBack());
         }
     }
