@@ -2071,5 +2071,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingForward: {fileID: 9100000, guid: b54a025d48c6d48479bcbddf8ce2b43a, type: 2}
-  sideOn: {fileID: 9100000, guid: 274090bba211777469b8a626f639c5e6, type: 2}
-  facingBackward: {fileID: 9100000, guid: 05c8f073527d90344b122f1d8c85e354, type: 2}
+  sideOn: {fileID: 9100000, guid: b2923cd42027f494193a3297c9126ff4, type: 2}
+  facingBackward: {fileID: 9100000, guid: 4bedc6c7b7dcccb48b36c2dae572b11c, type: 2}
+  childWithSprites: {fileID: 2004149159}
