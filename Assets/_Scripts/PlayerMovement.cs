@@ -45,7 +45,12 @@ public class PlayerMovement : MonoBehaviour
         else if (moveDir.x < 0 && !leftCheck) moveDir = moveDir.With(x: 0);
         if (moveDir.z > 0 && !upCheck) moveDir = moveDir.With(z: 0);
         else if (moveDir.z < 0 && !downCheck) moveDir = moveDir.With(z: 0);
-        
+        if(this.GetComponent<playerSwapSprites>() != null)
+        {
+            this.GetComponent<playerSwapSprites>().whichDirectionShouldBeFacing(moveDir);
+
+        }
+
         rb.velocity = (moveDir * movementSpeed);
     }
 
