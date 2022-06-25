@@ -116,6 +116,11 @@ public class GameManager : MonoBehaviour
             if (level.ID == currentLevel)
             {
                 GameObject.FindWithTag("Player").transform.position = level.levelSpawn;
+
+                foreach (var obj in level.enableThese)
+                {
+                    obj.SetActive(true);
+                }
             }
         }
         GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
@@ -165,4 +170,6 @@ public class Level{
     internal List<GameObject> Enemies;
     [SerializeField]
     internal Vector3 levelSpawn;
+    [SerializeField]
+    internal GameObject[] enableThese;
 }

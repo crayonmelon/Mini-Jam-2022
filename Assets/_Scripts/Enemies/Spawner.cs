@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         yield return null;
 
-        while (true)
+        while (GameManager.GM.currentLevel == level)
         {
             yield return new WaitForSeconds(Random.Range(min, max));
             Instantiate(spawnee, transform.position, transform.rotation);
