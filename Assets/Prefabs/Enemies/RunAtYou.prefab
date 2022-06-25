@@ -100,9 +100,10 @@ GameObject:
   - component: {fileID: 485623774}
   - component: {fileID: 485623773}
   - component: {fileID: 485623775}
+  - component: {fileID: 1750759550}
   m_Layer: 0
   m_Name: RunAtYou
-  m_TagString: Untagged
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,3 +309,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1750759550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606103618681130006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d49a268d43405799a2e3b04b7b9cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
