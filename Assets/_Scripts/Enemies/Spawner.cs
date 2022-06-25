@@ -8,7 +8,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject spawnee;
     [SerializeField] float min = 1f;
     [SerializeField] float max = 2f;
-    [SerializeField] int maxSpawn = 5;
     void Start()
     {
         StartCoroutine(SpawnLoop());
@@ -20,11 +19,8 @@ public class Spawner : MonoBehaviour
 
         while (true)
         {
-            if (GameManager.GM.currentLevel == level)
-            {
-                yield return new WaitForSeconds(Random.Range(min, max));
-                Instantiate(spawnee, transform.position, transform.rotation);
-            }
+            yield return new WaitForSeconds(Random.Range(min, max));
+            Instantiate(spawnee, transform.position, transform.rotation);
         }
     }
 }
