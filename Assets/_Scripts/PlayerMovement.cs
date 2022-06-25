@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 currentVelocity = Vector3.zero;
     private Vector3 moveDir;
 
+    [Header("Mouse Look")] 
+    [SerializeField] private Transform lookPivot;
+    [SerializeField] private LayerMask mouseLookLayer;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,12 +40,23 @@ public class PlayerMovement : MonoBehaviour
         if(context.performed)
         {
             Vector2 inputDir = context.ReadValue<Vector2>();
-            print(inputDir);
             moveDir = new Vector3(inputDir.x, 0f, inputDir.y);
         }
         else if (context.canceled)
         {
             moveDir = Vector2.zero;
+        }
+    }
+
+    public void HandleLookInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Physics.Raycast(Camera.main.ScreenPointToRay(context.ReadValue<Vector2>()), out RaycastHit hitInfo,
+                mouseLookLayer);
+
+            lookPivot.transform.LookAt(hitInfo.point);
+            lookPivot.SetEulerAngle(x: 0);
         }
     }
 }
