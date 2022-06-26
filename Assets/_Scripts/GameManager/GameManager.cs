@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
     public void fallInToNextLevel()
     {
         DestroyLevelEnemies();
+        currentLevel--;
 
         GameObject.FindWithTag("fallSprite").GetComponent<SpriteRenderer>().enabled = true;
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = true;
@@ -105,7 +106,7 @@ public class GameManager : MonoBehaviour
 
     public void StartNewLevel()
     {
-        currentLevel--;
+
         DisplaylevelText();
         //Fall SpriteRemoved
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = false;
