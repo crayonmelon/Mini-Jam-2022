@@ -11188,6 +11188,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 30d02de2-b4f6-4534-a5a7-5ac3aa411a64
     m_ActionName: Splash Screen/Continue[/Keyboard/anyKey,/Mouse/leftButton,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 19257fb1-05bc-4a52-bcf3-532d7c64f8db
+    m_ActionName: Gameplay/AudioUp[/Keyboard/rightBracket]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b8c87579-d3fc-4b42-a11f-d48d7e6b6793
+    m_ActionName: Gameplay/AudioDown[/Keyboard/leftBracket]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Splash Screen
@@ -25106,7 +25114,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Where does it go?
 
-    Nobody knows.'
+    Nobody knows.
+
+
+    for volume -> [ ]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
