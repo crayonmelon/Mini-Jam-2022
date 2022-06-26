@@ -10,14 +10,18 @@ public class ShootAtPlayer : MonoBehaviour
     {
         StartCoroutine(Shoot());
     }
+
+    private void Update()
+    {
+        transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform.position);
+    }
     IEnumerator Shoot()
     {
-        Vector3 dir = (transform.position - GameObject.FindGameObjectWithTag("Player").transform.position).normalized;
 
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            Instantiate(bullet, transform.position, dir);
+            Instantiate(bullet, transform.position, transform.rotation);
         }
     }
 }

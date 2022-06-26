@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edef0db65aa5ae543a3045cdbaf2ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthTake: 5
+  healthTake: 25
   bullet: {fileID: 6985884838369689073, guid: 1021097cc519091478ca3aeba3333b00, type: 3}
 --- !u!1 &1055488312
 GameObject:
@@ -1071,8 +1071,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1729924325}
   - component: {fileID: 1729924324}
-  - component: {fileID: 1729924323}
   - component: {fileID: 1729924326}
+  - component: {fileID: 898707235}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1138,14 +1138,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1729924323
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729924322}
-  m_Enabled: 1
 --- !u!114 &1729924326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1161,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1179,6 +1171,66 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &898707235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729924322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1729924325}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 2
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &1735621510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,6 +1896,7 @@ GameObject:
   - component: {fileID: 6767359967904633744}
   - component: {fileID: 772825879}
   - component: {fileID: 1003965537642495668}
+  - component: {fileID: 68670973}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2128,6 +2181,14 @@ MonoBehaviour:
   sideOn: {fileID: 9100000, guid: b2923cd42027f494193a3297c9126ff4, type: 2}
   facingBackward: {fileID: 9100000, guid: 4bedc6c7b7dcccb48b36c2dae572b11c, type: 2}
   childWithSprites: {fileID: 2004149159}
+--- !u!81 &68670973
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821834509705789066}
+  m_Enabled: 1
 --- !u!1 &9036639205607851898
 GameObject:
   m_ObjectHideFlags: 0
