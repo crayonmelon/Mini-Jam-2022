@@ -15932,12 +15932,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   spawnees:
-  - spawnee: {fileID: 4750228116021386604, guid: c3d07b1c0588e5d498072093ca6fbcff,
+  - spawnee: {fileID: 2316804410036481732, guid: a1980f483f422d64eae1ddacb9f99438,
       type: 3}
     spawnChange: 0.1
-  - spawnee: {fileID: 5606103618681130006, guid: 9026a31e25756734dbdab98e9a19272a,
+  - spawnee: {fileID: 4750228116021386604, guid: c3d07b1c0588e5d498072093ca6fbcff,
       type: 3}
     spawnChange: 0.2
+  - spawnee: {fileID: 5606103618681130006, guid: e308676e2ebea7743af73002f1842fc6,
+      type: 3}
+    spawnChange: 0.3
   - spawnee: {fileID: 5606103618681130006, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
       type: 3}
     spawnChange: 0.845
@@ -15956,7 +15959,7 @@ MonoBehaviour:
   - point: {x: -21, y: -117, z: 32.8}
     radius: 4.5
   MaxSpawn: 100
-  bulkSpawnSize: 4
+  bulkSpawnSize: 23
   ranMin: 1
   ranMax: 2
 --- !u!1 &1002730897
@@ -18968,7 +18971,7 @@ MonoBehaviour:
     radius: 10.6
   - point: {x: 23.49, y: 3, z: 40.6}
     radius: 13.8
-  MaxSpawn: 300
+  MaxSpawn: 150
   bulkSpawnSize: 4
   ranMin: 1
   ranMax: 2
@@ -23219,7 +23222,7 @@ GameObject:
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1893948123
 Transform:
   m_ObjectHideFlags: 0
@@ -23268,7 +23271,7 @@ MonoBehaviour:
     radius: 23
   - point: {x: 52.7, y: -57, z: -1.5}
     radius: 44
-  MaxSpawn: 10000
+  MaxSpawn: 190
   bulkSpawnSize: 10
   ranMin: 0.1
   ranMax: 1

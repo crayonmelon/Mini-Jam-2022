@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2316804410036481735}
   m_Layer: 0
-  m_Name: ScottTheWoz
+  m_Name: ScottTheWozShoot
   m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,3 +130,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d798c5011c96f47a3b6c89463bd10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2316804412133248629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7973886758732623778, guid: 58ccfd78ffbcfad43a6e3339bf1a45ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 5660495402826228183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5414405840239812374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316804412133248629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd80aeabd5f2be43b0dd3100a92d1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6985884838369689073, guid: ce9999b5e9974b24a995a17d6229f281, type: 3}
+  bulletSound: {fileID: 8300000, guid: 45246956cf7fb1b42894654fde8ff8ed, type: 3}
