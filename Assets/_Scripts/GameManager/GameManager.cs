@@ -29,6 +29,20 @@ public class GameManager : MonoBehaviour
         DisplaylevelText();
     }
 
+    internal int GetEnemyCount(int id) 
+    {
+        foreach (var level in levels)
+        {
+            if (level.ID == id)
+            {
+                return level.Enemies.Count;
+                break;
+            }
+        }
+
+        return 0;
+    } 
+
     internal void ChangeHeath(int health)
     {
         Health += health;

@@ -28,6 +28,10 @@ public class Spawner : MonoBehaviour
         while (GameManager.GM.currentLevel == level)
         {
             yield return new WaitForSeconds(Random.Range(ranMin, ranMax));
+
+            if (MaxSpawn < GameManager.GM.GetEnemyCount(level))
+                continue;
+
             float ran = Random.Range(0f, 1f);
             for (int i = 0; i < Random.Range(1, bulkSpawnSize); i++)
             {
