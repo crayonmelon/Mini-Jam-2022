@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 
 public class AudioController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] AudioMixer audioMixer;
+
+    public void HandleVolumeUp(InputAction.CallbackContext context)
     {
-        
+        if (context.started)
+        {
+            float currentVal;
+
+            audioMixer.GetFloat("MyExposedParam", out currentVal);
+            audioMixer.SetFloat("MyExposedParam", currentVal + 1);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HandleVolumeDown(InputAction.CallbackContext context)
     {
-        
+        if (context.started)
+        {
+            float currentVal;
+
+            audioMixer.GetFloat("MyExposedParam", out currentVal);
+            audioMixer.SetFloat("MyExposedParam", currentVal - 1);
+
+        }
     }
+
 }
