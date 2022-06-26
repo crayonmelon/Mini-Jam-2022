@@ -16,8 +16,8 @@ public class BloodPlease : MonoBehaviour
         {
             viableDonor = true;
             friendlyLocalCreditUnion = other.GetComponent<BloodBank>();
-            friendlyLocalCreditUnion.prompt.SetActive(true);
-            Debug.Log("prompting", this.transform);
+            if(!friendlyLocalCreditUnion.full)
+                friendlyLocalCreditUnion.prompt.SetActive(true);
         }
     }
     

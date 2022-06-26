@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class BloodBank : MonoBehaviour
 {
+    [SerializeField] private bool isBossGate = false;
     public bool donating = false;
-    private bool full = false;
+    [HideInInspector] public bool full = false;
     [SerializeField] private float donateRate = 5;
     [SerializeField] private MeshRenderer blood;
     private float currentBlood = 0f;
@@ -45,10 +46,18 @@ public class BloodBank : MonoBehaviour
 
         if (full)
         {
-            Debug.Log("OHNO");
-           
-            GameManager.GM.fallInToNextLevel();
-            Destroy(gameObject);
+            if (isBossGate)
+            {
+                GetComponentInParent<JoeVeal>().TakeDamage();
+            }
+            else
+            {
+                Debug.Log("OHNO");
+
+                GameManager.GM.fallInToNextLevel();
+            }
+            prompt.SetActive(false);
+            Destroy(this);
         }
     }
 }
