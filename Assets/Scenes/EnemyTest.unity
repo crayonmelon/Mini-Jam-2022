@@ -7834,8 +7834,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  spawnees: []
-  min: 1
+  spawnees:
+  - spawnee: {fileID: 2316804410036481732, guid: ee9e54362e1a96f409bc4ca75e7dc140,
+      type: 3}
+    spawnChange: 0.1
+  - spawnee: {fileID: 5606103618681130006, guid: 9026a31e25756734dbdab98e9a19272a,
+      type: 3}
+    spawnChange: 0.2
+  - spawnee: {fileID: 5606103618681130006, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
+      type: 3}
+    spawnChange: 1
+  min: 0
   max: 2
 --- !u!1 &308693396
 GameObject:
@@ -23134,8 +23143,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  spawnees: []
-  min: 1
+  spawnees:
+  - spawnee: {fileID: 2316804410036481732, guid: ee9e54362e1a96f409bc4ca75e7dc140,
+      type: 3}
+    spawnChange: 0.1
+  - spawnee: {fileID: 5606103618681130006, guid: 9026a31e25756734dbdab98e9a19272a,
+      type: 3}
+    spawnChange: 0.2
+  - spawnee: {fileID: 5606103618681130006, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
+      type: 3}
+    spawnChange: 1
+  min: 0
   max: 2
 --- !u!1 &497660638
 GameObject:
@@ -24053,8 +24071,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  spawnees: []
-  min: 1
+  spawnees:
+  - spawnee: {fileID: 2316804410036481732, guid: ee9e54362e1a96f409bc4ca75e7dc140,
+      type: 3}
+    spawnChange: 0.1
+  - spawnee: {fileID: 5606103618681130006, guid: 9026a31e25756734dbdab98e9a19272a,
+      type: 3}
+    spawnChange: 0.2
+  - spawnee: {fileID: 5606103618681130006, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
+      type: 3}
+    spawnChange: 1
+  min: 0
   max: 2
 --- !u!1 &570193674
 GameObject:
@@ -33027,6 +33054,78 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &898707230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1729924322, guid: 62c36305a08bcb043beb686dae6e6cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1936213658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &898707231 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1729924325, guid: 62c36305a08bcb043beb686dae6e6cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1936213658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &898707235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898707230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 898707231}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 2
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!43 &926723035
 Mesh:
   m_ObjectHideFlags: 0
@@ -33236,8 +33335,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  spawnees: []
-  min: 1
+  spawnees:
+  - spawnee: {fileID: 2316804410036481732, guid: ee9e54362e1a96f409bc4ca75e7dc140,
+      type: 3}
+    spawnChange: 0.1
+  - spawnee: {fileID: 5606103618681130006, guid: 9026a31e25756734dbdab98e9a19272a,
+      type: 3}
+    spawnChange: 0.2
+  - spawnee: {fileID: 5606103618681130006, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
+      type: 3}
+    spawnChange: 1
+  min: 0
   max: 2
 --- !u!1 &946136517
 GameObject:
@@ -55958,8 +56066,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  spawnees: []
-  min: 1
+  spawnees:
+  - spawnee: {fileID: 2316804410036481732, guid: ee9e54362e1a96f409bc4ca75e7dc140,
+      type: 3}
+    spawnChange: 0.1
+  - spawnee: {fileID: 5606103618681130006, guid: 9026a31e25756734dbdab98e9a19272a,
+      type: 3}
+    spawnChange: 0.2
+  - spawnee: {fileID: 5606103618681130006, guid: 3e27a7eeb966aa44c8303aaac8f5396c,
+      type: 3}
+    spawnChange: 1
+  min: 0
   max: 2
 --- !u!43 &1439350318
 Mesh:
@@ -70785,6 +70902,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913940089, guid: 62c36305a08bcb043beb686dae6e6cb5, type: 3}
+      propertyPath: healthTake
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729924322, guid: 62c36305a08bcb043beb686dae6e6cb5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729924326, guid: 62c36305a08bcb043beb686dae6e6cb5, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6821834509705789062, guid: 62c36305a08bcb043beb686dae6e6cb5,
         type: 3}
       propertyPath: m_RootOrder
