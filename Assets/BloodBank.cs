@@ -31,7 +31,7 @@ public class BloodBank : MonoBehaviour
                 this.GetComponent<AudioSource>().PlayOneShot(bloodPourSfx);
             }
             currentBlood += donateRate;
-            GameManager.GM.ChangeHeath(-(int)donateRate);
+            GameManager.GM.ChangeHealth(-(int)donateRate);
 
             if (currentBlood >= capacity)
             {

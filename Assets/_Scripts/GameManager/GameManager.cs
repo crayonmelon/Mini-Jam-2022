@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour
         return 0;
     } 
 
-    internal void ChangeHeath(int health)
+    internal void ChangeHealth(int _health)
     {
-        Health += health;
+        Health += _health;
 
         if (Health <= 0)
         {
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         } 
         else if (Health > maxHealth)
         {
-            health = maxHealth;
+            Health = maxHealth;
         }
     }
 
@@ -125,6 +125,7 @@ public class GameManager : MonoBehaviour
         //Fall SpriteRemoved
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = false;
         GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = false;
+        maxHealth += 40;
 
         foreach (var level in levels)
         {
