@@ -9,10 +9,12 @@ public class Spawner : MonoBehaviour
     [SerializeField] List<SpawnChance> spawnees;
     [SerializeField] List<SpawnPoint> spawnPoints;
     [SerializeField] int MaxSpawn = 100;
+    [SerializeField] int bulkSpawnSize = 4;
+
     [Header("Random Min Max")]
     [SerializeField] float ranMin = 1f;
     [SerializeField] float ranMax = 2f;
-    void Start()
+    void OnEnable()
     {
        /* spawnees.Sort(SpawnChance.)*/
 
@@ -27,14 +29,15 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(ranMin, ranMax));
             float ran = Random.Range(0f, 1f);
-            for (int i = 0; i < Random.Range(1,4); i++)
+            for (int i = 0; i < Random.Range(1, bulkSpawnSize); i++)
             {
+
+                SpawnPoint randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Count)];
+
                 foreach (SpawnChance spawnee in spawnees)
                 {
                     if (spawnee.spawnChange >= ran)
                     {
-                        SpawnPoint randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Count)];
-
                         Instantiate(spawnee.spawnee, 
                             (randomSpawn.point + (Random.insideUnitSphere * randomSpawn.radius)).With(y: randomSpawn.point.y), 
                             transform.rotation);
