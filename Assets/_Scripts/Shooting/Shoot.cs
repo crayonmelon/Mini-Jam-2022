@@ -7,7 +7,8 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField] int healthTake = 5;
     [SerializeField] GameObject bullet;
- 
+    [SerializeField] AudioClip bulletSound;
+
     public void HandleShootInput(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -20,6 +21,7 @@ public class Shoot : MonoBehaviour
     {
         if (GameManager.GM.Health > healthTake)
         {
+            this.GetComponent<AudioSource>().PlayOneShot(bulletSound);
             GameManager.GM.ChangeHeath(-1 * healthTake);
             Instantiate(bullet, transform.position, transform.rotation);
         }

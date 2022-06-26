@@ -10,7 +10,7 @@ public class Sword : MonoBehaviour
     private Animator anim;
     private GameObject sword;
     [SerializeField] private Transform swordScalePoint;
-    
+    [SerializeField] AudioClip swordSlashSound;
     private void Awake()
     {
         lookPivot = transform.parent.parent;
@@ -43,8 +43,10 @@ public class Sword : MonoBehaviour
     {
         transform.parent.eulerAngles = lookPivot.eulerAngles;
         sword.SetActive(true);
+        this.GetComponent<AudioSource>().PlayOneShot(swordSlashSound);
         transform.eulerAngles = lookPivot.eulerAngles;
         anim.enabled = true;
+
     }
     
     

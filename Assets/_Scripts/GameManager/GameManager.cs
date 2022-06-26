@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public int Health = 100;
 
     public int currentLevel = 4;
-
+    [SerializeField] AudioClip fallingSfx; //Fuck you thats why I put this here
     public Level[] levels;
 
     [SerializeField] GameObject TextCanvas;
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
     {
         DestroyLevelEnemies();
         currentLevel--;
-
+        this.GetComponent<AudioSource>().PlayOneShot(fallingSfx);
         GameObject.FindWithTag("fallSprite").GetComponent<SpriteRenderer>().enabled = true;
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = true;
         GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = true;

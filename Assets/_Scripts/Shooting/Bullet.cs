@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] float Speed;
     [SerializeField] float lifeSpan = .5f;
+
     float timer = 0;
     
     void Update()

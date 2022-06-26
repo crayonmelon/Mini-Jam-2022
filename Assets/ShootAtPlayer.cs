@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootAtPlayer : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
-    
+    [SerializeField] AudioClip bulletSound;
     void OnEnable()
     {
         StartCoroutine(Shoot());
@@ -21,6 +21,7 @@ public class ShootAtPlayer : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
+            this.GetComponent<AudioSource>().PlayOneShot(bulletSound);
             Instantiate(bullet, transform.position, transform.rotation);
         }
     }

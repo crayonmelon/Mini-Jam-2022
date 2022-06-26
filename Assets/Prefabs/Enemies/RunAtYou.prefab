@@ -309,6 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   healthBack: 5
+  damageTakenSound: {fileID: 8300000, guid: 5ebbff2bca5675344ba67f6388aa18b8, type: 3}
 --- !u!114 &1384660503
 MonoBehaviour:
   m_ObjectHideFlags: 0

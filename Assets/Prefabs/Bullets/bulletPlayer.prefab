@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 198367458, guid: d361b2a7924306841807d1df9e62ccaa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.93012905, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 5613069184963688603}
   - component: {fileID: 25976498655763033}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: bulletPlayer
   m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,6 +13,8 @@ public class BloodBank : MonoBehaviour
     [SerializeField] private float capacity = 100f;
     [SerializeField] private TMPro.TextMeshProUGUI progressText;
     public GameObject prompt;
+    [SerializeField] AudioClip bloodPourSfx;
+    [SerializeField] AudioClip fallingSfx; //Fuck you thats why I put this here
 
     private void Awake()
     {
@@ -23,6 +25,10 @@ public class BloodBank : MonoBehaviour
     {
         if (donating && !full)
         {
+            if (this.GetComponent<AudioSource>().isPlaying != true)
+            {
+                this.GetComponent<AudioSource>().PlayOneShot(bloodPourSfx);
+            }
             currentBlood += donateRate;
             GameManager.GM.ChangeHeath(-(int)donateRate);
 
@@ -40,6 +46,7 @@ public class BloodBank : MonoBehaviour
         if (full)
         {
             Debug.Log("OHNO");
+           
             GameManager.GM.fallInToNextLevel();
             Destroy(gameObject);
         }

@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform up, down, left, right;
     
-    [Header("Mouse Look")] 
+    [Header("Mouse Look")]
+    [SerializeField] AudioClip walkingSound;
     [SerializeField] private Transform lookPivot;
     [SerializeField] private LayerMask mouseLookLayer;
 
@@ -51,7 +52,9 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+
         rb.velocity = (moveDir * movementSpeed);
+        
     }
 
     private void GroundChecks()
@@ -68,10 +71,19 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 inputDir = context.ReadValue<Vector2>();
             moveDir = new Vector3(inputDir.x, 0f, inputDir.y);
+            playWalkSound();
         }
         else if (context.canceled)
         {
             moveDir = Vector2.zero;
+        }
+    }
+    private void playWalkSound()
+    {
+        AudioSource audio = this.GetComponent<AudioSource>();
+        if (audio.isPlaying != true)
+        {
+            GetComponent<AudioSource>().PlayOneShot(walkingSound);
         }
     }
 
