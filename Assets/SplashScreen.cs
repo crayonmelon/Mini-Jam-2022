@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
-    [SerializeField] private string mainLevelName;
-    [SerializeField] private Animator bloodJar, screenCover;
+    [SerializeField] private Animator bloodJar;
     private int currentStep = 0;
     [SerializeField] private GameObject tutScreen1, tutScreen2, tutScreen3, tutScreen4;
 
@@ -32,8 +31,7 @@ public class SplashScreen : MonoBehaviour
                 tutScreen4.SetActive(true);
                 break;
             default:
-                print($"load: {mainLevelName}");
-                //SceneManager.LoadSceneAsync(mainLevelName);
+                SceneManager.LoadSceneAsync(1);
                 break;
         }
     }

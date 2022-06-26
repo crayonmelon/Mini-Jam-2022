@@ -247,7 +247,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35506
+  m_Name: pb_Mesh40144
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -440,7 +440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3.100006}
+  m_AnchoredPosition: {x: 0, y: -6.67}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133229066
@@ -463,7 +463,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fill Blood Gate
+  m_text: 'Find the jar.
+
+    Fill the jar with your sweet sweet health.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -547,7 +549,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35434
+  m_Name: pb_Mesh40022
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -740,7 +742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3.1}
+  m_AnchoredPosition: {x: 0, y: -35}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &191884789
@@ -763,7 +765,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Healing
+  m_text: 'Enemies and projectiles hurt.
+
+    Press right click to shoot at a cost.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -847,7 +851,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-290456
+  m_Name: pb_Mesh45310
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6887,7 +6891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: How to Play
+  m_text: Fill the blood gate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -10828,7 +10832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: How to Play
+  m_text: Healing
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -10912,7 +10916,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-290452
+  m_Name: pb_Mesh45440
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11081,6 +11085,7 @@ GameObject:
   - component: {fileID: 678800586}
   - component: {fileID: 678800585}
   - component: {fileID: 678800587}
+  - component: {fileID: 678800588}
   m_Layer: 0
   m_Name: Splash Screen
   m_TagString: Untagged
@@ -11100,9 +11105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387c612751a00d549818421d0e8dbdee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainLevelName: bazinga
   bloodJar: {fileID: 742437711}
-  screenCover: {fileID: 0}
   tutScreen1: {fileID: 23900774}
   tutScreen2: {fileID: 1165579656}
   tutScreen3: {fileID: 1455524756}
@@ -11190,6 +11193,102 @@ MonoBehaviour:
   m_DefaultActionMap: Splash Screen
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!82 &678800588
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678800584}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &742437708
 GameObject:
   m_ObjectHideFlags: 0
@@ -12704,7 +12803,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35388
+  m_Name: pb_Mesh39978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21220,7 +21319,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35450
+  m_Name: pb_Mesh40036
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21462,7 +21561,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35538
+  m_Name: pb_Mesh40226
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24982,8 +25081,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3.100006}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -35}
+  m_SizeDelta: {x: -46.6, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449285233
 MonoBehaviour:
@@ -25005,7 +25104,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Progress Deeper
+  m_text: 'Where does it go?
+
+    Nobody knows.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -25141,7 +25242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: How to Play
+  m_text: Taking Damage
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -25332,7 +25433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3.1}
+  m_AnchoredPosition: {x: 0, y: -35}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1457268516
@@ -25355,7 +25456,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Taking Damage
+  m_text: 'Press left click to attack.
+
+    Landing hits will heal.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -26446,7 +26549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: How to Play
+  m_text: Go Deeper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3df3100a377253243b06a982a9b86a79, type: 2}
   m_sharedMaterial: {fileID: -7598978827055842657, guid: 3df3100a377253243b06a982a9b86a79,
@@ -28465,7 +28568,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35566
+  m_Name: pb_Mesh40262
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28848,7 +28951,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35492
+  m_Name: pb_Mesh40120
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29188,7 +29291,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35412
+  m_Name: pb_Mesh40000
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29352,7 +29455,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35524
+  m_Name: pb_Mesh40180
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
