@@ -152,6 +152,56 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Splash Screen",
+            "id": "35aa8ccf-b65b-4f10-9180-a7c52dc5d7e2",
+            "actions": [
+                {
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "30d02de2-b4f6-4534-a5a7-5ac3aa411a64",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3813a4d2-2fbc-4ec0-bb7d-eff0ee3aa7b7",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af16672a-6738-4fbc-ae16-084980b6fe94",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "705a1f0f-abb1-41d1-ba0b-9b483fd82476",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
