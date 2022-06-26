@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 45
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3201
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ebee13db3ec98488f7dd40846a0607
+      internalID: 2115005392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2801
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fba6fb86a10ace48a15467b753bf0a1
+      internalID: -1615043364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2801
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b785fa0f350d04f409a6cf5385ee9c11
+      internalID: -600045020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2401
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6c03701bd14884f8fa915637ba3a09
+      internalID: 1593513631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2401
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b14899d8e88dac42b885f2073bd7f6a
+      internalID: -1750910431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2001
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4341decf93582e3419f482ed3de22425
+      internalID: 557159451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2001
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51454075a4edd54aa4e2dda75e6c93a
+      internalID: 1269134266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1601
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b741dd04b2c9c4e40aa2a2453ebee329
+      internalID: -840257737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1601
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fcc71f9cf985342ba82ab6f285fa92
+      internalID: -1728155584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1201
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac44c7ba5cfaa4c479b0b8b307a29136
+      internalID: 197768748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1201
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3c427c281ba1945828e3a1f653ae01
+      internalID: 2066979387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 801
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398d17b47785ed747b71fad984dd2914
+      internalID: 243587587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 801
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4ac67271bd796439a680c9c444297c
+      internalID: 840191821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 401
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e655f6c501877d4ebbe78bb62286675
+      internalID: -1529520680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 401
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a100cc2ca47de74588207ba70cb0219
+      internalID: 520830565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bae78b08f0a73a4c8e5b8aa191fb519
+      internalID: -436125746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 200by150HearStopperSwordSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1
+        width: 300
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fe81704ecceb242b870e50de1cb70f
+      internalID: -54111657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +470,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      200by150HearStopperSwordSpriteSheet_9: 197768748
+      200by150HearStopperSwordSpriteSheet_0: 2115005392
+      200by150HearStopperSwordSpriteSheet_12: 840191821
+      200by150HearStopperSwordSpriteSheet_5: 557159451
+      200by150HearStopperSwordSpriteSheet_14: 520830565
+      200by150HearStopperSwordSpriteSheet_11: 243587587
+      200by150HearStopperSwordSpriteSheet_16: -54111657
+      200by150HearStopperSwordSpriteSheet_1: -1615043364
+      200by150HearStopperSwordSpriteSheet_7: -840257737
+      200by150HearStopperSwordSpriteSheet_6: 1269134266
+      200by150HearStopperSwordSpriteSheet_2: -600045020
+      200by150HearStopperSwordSpriteSheet_10: 2066979387
+      200by150HearStopperSwordSpriteSheet_15: -436125746
+      200by150HearStopperSwordSpriteSheet_3: 1593513631
+      200by150HearStopperSwordSpriteSheet_4: -1750910431
+      200by150HearStopperSwordSpriteSheet_8: -1728155584
+      200by150HearStopperSwordSpriteSheet_13: -1529520680
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

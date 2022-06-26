@@ -33,6 +33,7 @@ public class Sword : MonoBehaviour
     void Update()
     {
         swordScalePoint.localScale = swordScalePoint.localScale.With(y: GameManager.GM.Health / 100f);
+        swordScalePoint.GetChild(0).localScale = swordScalePoint.GetChild(0).localScale.With(y: GameManager.GM.Health / 100f); //Sorry Evan I  seperated the box collider from the sprite
         transform.parent.position = lookPivot.position;
     }
 
