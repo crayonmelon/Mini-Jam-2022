@@ -22,6 +22,12 @@ public class BloodBank : MonoBehaviour
         prompt.SetActive(false);
     }
 
+    public void ShowPrompt()
+    {
+        if (!full)
+            prompt.SetActive(true);
+    }
+
     void FixedUpdate()
     {
         if (donating && !full)

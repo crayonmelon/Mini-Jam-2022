@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JoeVeal : MonoBehaviour
@@ -10,6 +7,8 @@ public class JoeVeal : MonoBehaviour
     private float Health = 1;
 
     [SerializeField] private Transform HealthBar;
+    [SerializeField] private Animator anim;
+    [SerializeField] private Camera deathCam;
 
     private void Awake()
     {
@@ -23,7 +22,14 @@ public class JoeVeal : MonoBehaviour
 
         if (Health == 0)
         {
-            print("ohno am dead");
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        GameManager.GM.DestroyLevelEnemies();
+        anim.SetTrigger("Die");
+        deathCam.enabled = true;
     }
 }

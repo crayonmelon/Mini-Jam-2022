@@ -14,10 +14,12 @@ public class BloodPlease : MonoBehaviour
     {
         if (other.CompareTag("BloodBank"))
         {
-            viableDonor = true;
-            friendlyLocalCreditUnion = other.GetComponent<BloodBank>();
-            if(!friendlyLocalCreditUnion.full)
-                friendlyLocalCreditUnion.prompt.SetActive(true);
+            if (other.TryGetComponent<BloodBank>(out friendlyLocalCreditUnion))
+            {
+                if (!friendlyLocalCreditUnion.full)
+                    friendlyLocalCreditUnion.prompt.SetActive(true);
+                viableDonor = true;
+            }
         }
     }
     
@@ -26,8 +28,11 @@ public class BloodPlease : MonoBehaviour
         if (other.CompareTag("BloodBank"))
         {
             viableDonor = false;
-            friendlyLocalCreditUnion.donating = false;
-            friendlyLocalCreditUnion.prompt.SetActive(false);
+            if (other.TryGetComponent<BloodBank>(out friendlyLocalCreditUnion))
+            {
+                friendlyLocalCreditUnion.donating = false;
+                friendlyLocalCreditUnion.prompt.SetActive(false);
+            }
         }
     }
 
