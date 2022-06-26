@@ -52,7 +52,7 @@ public class EnemyCollider : MonoBehaviour
 
     private void Attack()
     {
-        GameManager.GM.ChangeHeath(-1 * HealthLost);
+        GameManager.GM.ChangeHealth(-1 * HealthLost);
         audioSource.PlayOneShot(hitSound);
     }
 

@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
 
         if (timer >= lifeSpan)
         {
+            GameManager.GM.RemoveEnemy(gameObject);
             Destroy(gameObject);
         }
     }

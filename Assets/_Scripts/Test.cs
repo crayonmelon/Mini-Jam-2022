@@ -7,7 +7,7 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.GM.ChangeHeath(2);
+        GameManager.GM.ChangeHealth(2);
     }
 
     // Update is called once per frame

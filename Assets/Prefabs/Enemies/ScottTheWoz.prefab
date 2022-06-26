@@ -39,6 +39,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2316804410036481735}
     m_Modifications:
+    - target: {fileID: 7973886757124384736, guid: 58ccfd78ffbcfad43a6e3339bf1a45ce,
+        type: 3}
+      propertyPath: damageTakenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f3d69d35a6f50b141a6fe699346ff617, type: 3}
     - target: {fileID: 7973886757124384740, guid: 58ccfd78ffbcfad43a6e3339bf1a45ce,
         type: 3}
       propertyPath: m_RootOrder
@@ -99,6 +104,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: holyFuck_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7973886758732623776, guid: 58ccfd78ffbcfad43a6e3339bf1a45ce,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dbe17df9dd395e546b992abab9e00801,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ccfd78ffbcfad43a6e3339bf1a45ce, type: 3}
 --- !u!4 &2316804410529236531 stripped

@@ -8,7 +8,7 @@ public class Sword : MonoBehaviour
 {
     private Transform lookPivot;
     private Animator anim;
-    private GameObject sword;
+    private GameObject sword, handle;
     [SerializeField] private Transform swordScalePoint;
     [SerializeField] AudioClip swordSlashSound;
     private void Awake()
@@ -19,7 +19,9 @@ public class Sword : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.enabled = false;
 
-        sword = transform.GetChild(0).gameObject;
+        handle = transform.GetChild(0).gameObject;
+        handle.SetActive(false);
+        sword = transform.GetChild(1).gameObject;
         sword.SetActive(false);
     }
 
@@ -27,13 +29,14 @@ public class Sword : MonoBehaviour
     {
         anim.enabled = false;
         sword.SetActive(false);
+        handle.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         swordScalePoint.localScale = swordScalePoint.localScale.With(y: GameManager.GM.Health / 100f);
-        swordScalePoint.GetChild(0).localScale = swordScalePoint.GetChild(0).localScale.With(y: GameManager.GM.Health / 100f); //Sorry Evan I  seperated the box collider from the sprite
+        //swordScalePoint.GetChild(0).localScale = swordScalePoint.GetChild(0).localScale.With(y: GameManager.GM.Health / 100f); //Sorry Evan I  seperated the box collider from the sprite
         transform.parent.position = lookPivot.position;
     }
 
@@ -43,6 +46,7 @@ public class Sword : MonoBehaviour
     {
         transform.parent.eulerAngles = lookPivot.eulerAngles;
         sword.SetActive(true);
+        handle.SetActive(true);
         this.GetComponent<AudioSource>().PlayOneShot(swordSlashSound);
         transform.eulerAngles = lookPivot.eulerAngles;
         anim.enabled = true;

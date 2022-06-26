@@ -29,9 +29,23 @@ public class GameManager : MonoBehaviour
         DisplaylevelText();
     }
 
-    internal void ChangeHeath(int health)
+    internal int GetEnemyCount(int id) 
     {
-        Health += health;
+        foreach (var level in levels)
+        {
+            if (level.ID == id)
+            {
+                return level.Enemies.Count;
+                break;
+            }
+        }
+
+        return 0;
+    } 
+
+    internal void ChangeHealth(int _health)
+    {
+        Health += _health;
 
         if (Health <= 0)
         {
@@ -39,7 +53,7 @@ public class GameManager : MonoBehaviour
         } 
         else if (Health > maxHealth)
         {
-            health = maxHealth;
+            Health = maxHealth;
         }
     }
 
@@ -101,7 +115,7 @@ public class GameManager : MonoBehaviour
 
     public Vector3 returnLevelPlane() //Every Next Level is -60 on the y axis from the last one
     { //Please Move this function somewhere else
-        return new Vector3 (0, (4 - currentLevel ) * -60, 0); //Magic number 4 is just the starting floor number which in turn dictates the total amount of floor
+        return new Vector3 (0, (3 - currentLevel ) * -60, 0); //Magic number 4 is just the starting floor number which in turn dictates the total amount of floor
     }
 
     public void StartNewLevel()
@@ -111,6 +125,7 @@ public class GameManager : MonoBehaviour
         //Fall SpriteRemoved
         GameObject.FindWithTag("fallDownCamera").GetComponent<Camera>().enabled = false;
         GameObject.FindWithTag("fallSprite").GetComponent<Animator>().enabled = false;
+        maxHealth += 40;
 
         foreach (var level in levels)
         {

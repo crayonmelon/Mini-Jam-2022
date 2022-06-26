@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour
         if (GameManager.GM.Health > healthTake)
         {
             this.GetComponent<AudioSource>().PlayOneShot(bulletSound);
-            GameManager.GM.ChangeHeath(-1 * healthTake);
+            GameManager.GM.ChangeHealth(-1 * healthTake);
             Instantiate(bullet, transform.position, transform.rotation);
         }
         else

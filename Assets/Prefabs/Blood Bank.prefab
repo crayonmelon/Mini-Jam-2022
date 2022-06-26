@@ -3381,7 +3381,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -1.25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 10.4, y: 6.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &810077349769040426
 CanvasRenderer:
@@ -3617,7 +3617,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 8.59}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 10.8, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &810077350460083825
 CanvasRenderer:
@@ -3787,7 +3787,6 @@ MonoBehaviour:
   progressText: {fileID: 810077349769040429}
   prompt: {fileID: 810077350460083826}
   bloodPourSfx: {fileID: 8300000, guid: 3181e01e2b5e69e4d82a2cb41e0df1d5, type: 3}
-  fallingSfx: {fileID: 8300000, guid: 9a28aa7b79b02124396f6287e639a8ef, type: 3}
 --- !u!82 &4252079322462085831
 AudioSource:
   m_ObjectHideFlags: 0

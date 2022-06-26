@@ -121,6 +121,8 @@ GameObject:
   - component: {fileID: 25976498655763033}
   - component: {fileID: 3133046536414153201}
   - component: {fileID: 8797989081838301724}
+  - component: {fileID: 6661161642139869946}
+  - component: {fileID: 2354382975903653283}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: EnemyHitbox
@@ -221,7 +223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 20
   lifeSpan: 5
-  bulletSound: {fileID: 0}
 --- !u!54 &25976498655763033
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -251,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthLost: 5
-  dotDamage: 0.5
+  dotDamage: 1
   hitSound: {fileID: 0}
 --- !u!82 &8797989081838301724
 AudioSource:
@@ -349,3 +350,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6661161642139869946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985884838369689073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d49a268d43405799a2e3b04b7b9cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  healthBack: 0
+  damageTakenSound: {fileID: 8300000, guid: 5ebbff2bca5675344ba67f6388aa18b8, type: 3}
+--- !u!114 &2354382975903653283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985884838369689073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d798c5011c96f47a3b6c89463bd10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
