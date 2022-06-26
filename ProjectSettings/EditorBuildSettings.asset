@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Player Combat.unity
+    path: Assets/Scenes/Splash Screen.unity
     guid: 78d66456ad330f94f8f655508af9e205
   - enabled: 1
     path: Assets/Scenes/EnemyTest.unity

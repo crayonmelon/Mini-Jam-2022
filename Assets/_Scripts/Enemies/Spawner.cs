@@ -27,18 +27,20 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(ranMin, ranMax));
             float ran = Random.Range(0f, 1f);
-
-            foreach (SpawnChance spawnee in spawnees)
+            for (int i = 0; i < Random.Range(1,4); i++)
             {
-                if (spawnee.spawnChange >= ran)
+                foreach (SpawnChance spawnee in spawnees)
                 {
-                    SpawnPoint randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Count)];
+                    if (spawnee.spawnChange >= ran)
+                    {
+                        SpawnPoint randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Count)];
 
-                    Instantiate(spawnee.spawnee, 
-                        (randomSpawn.point + (Random.insideUnitSphere * randomSpawn.radius)).With(y: randomSpawn.point.y), 
-                        transform.rotation);
+                        Instantiate(spawnee.spawnee, 
+                            (randomSpawn.point + (Random.insideUnitSphere * randomSpawn.radius)).With(y: randomSpawn.point.y), 
+                            transform.rotation);
 
-                    break;
+                        break;
+                    }
                 }
             }
         }

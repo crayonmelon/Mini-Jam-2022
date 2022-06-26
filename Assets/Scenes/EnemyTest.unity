@@ -892,7 +892,7 @@ PrefabInstance:
     - target: {fileID: 810077350473660776, guid: 5832ffefc53e30340ad048ab6ea92a0a,
         type: 3}
       propertyPath: capacity
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 810077350473660778, guid: 5832ffefc53e30340ad048ab6ea92a0a,
         type: 3}
@@ -1263,8 +1263,9 @@ MonoBehaviour:
     radius: 13.95
   - point: {x: 30, y: 63, z: -22.6}
     radius: 8.2
-  min: 0
-  max: 2
+  MaxSpawn: 100
+  ranMin: 1
+  ranMax: 2
 --- !u!43 &168137486
 Mesh:
   m_ObjectHideFlags: 0
@@ -8115,8 +8116,9 @@ MonoBehaviour:
       type: 3}
     spawnChange: 1
   spawnPoints: []
-  min: 0
-  max: 2
+  MaxSpawn: 100
+  ranMin: 1
+  ranMax: 2
 --- !u!1 &308693396
 GameObject:
   m_ObjectHideFlags: 0
@@ -23428,8 +23430,9 @@ MonoBehaviour:
       type: 3}
     spawnChange: 1
   spawnPoints: []
-  min: 0
-  max: 2
+  MaxSpawn: 100
+  ranMin: 1
+  ranMax: 2
 --- !u!1 &497660638
 GameObject:
   m_ObjectHideFlags: 0
@@ -24360,8 +24363,9 @@ MonoBehaviour:
       type: 3}
     spawnChange: 1
   spawnPoints: []
-  min: 0
-  max: 2
+  MaxSpawn: 100
+  ranMin: 1
+  ranMax: 2
 --- !u!1 &570193674
 GameObject:
   m_ObjectHideFlags: 0
@@ -33556,8 +33560,9 @@ MonoBehaviour:
       type: 3}
     spawnChange: 1
   spawnPoints: []
-  min: 0
-  max: 2
+  MaxSpawn: 100
+  ranMin: 1
+  ranMax: 2
 --- !u!1 &946136517
 GameObject:
   m_ObjectHideFlags: 0
@@ -56286,8 +56291,9 @@ MonoBehaviour:
       type: 3}
     spawnChange: 1
   spawnPoints: []
-  min: 0
-  max: 2
+  MaxSpawn: 100
+  ranMin: 1
+  ranMax: 2
 --- !u!43 &1439350318
 Mesh:
   m_ObjectHideFlags: 0
@@ -73016,6 +73022,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2316804410529236535, guid: ee9e54362e1a96f409bc4ca75e7dc140,
+        type: 3}
+      propertyPath: healthBack
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee9e54362e1a96f409bc4ca75e7dc140, type: 3}
