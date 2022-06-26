@@ -14,10 +14,10 @@ public class EnemyStats : MonoBehaviour
         print($"ooo owie ouch  taken: {damage} left: {health}");
 
         if (attackType == AttackType.Sword)
-            GameManager.GM.ChangeHeath(healthBack);
+            GameManager.GM.ChangeHealth(healthBack);
 
         else if (attackType == AttackType.Bullet)
-            GameManager.GM.ChangeHeath(healthBack / 4);
+            GameManager.GM.ChangeHealth(healthBack / 4);
 
         if (health <= 0)
             Death(attackType);
