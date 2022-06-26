@@ -14,7 +14,7 @@ public class BloodBank : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI progressText;
     public GameObject prompt;
     [SerializeField] AudioClip bloodPourSfx;
-    [SerializeField] AudioClip fallingSfx; //Fuck you thats why I put this here
+
 
     private void Awake()
     {
