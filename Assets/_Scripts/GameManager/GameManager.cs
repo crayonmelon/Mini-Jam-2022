@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
             _GM = this;
         }
         DisplaylevelText();
+
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     internal int GetEnemyCount(int id) 
@@ -136,7 +138,7 @@ public class GameManager : MonoBehaviour
         }
 
         EnablingAndDisabling();
-        DestroyLevelEnemies((currentLevel+1));
+       // DestroyLevelEnemies((currentLevel+1));
 
         GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
     }
