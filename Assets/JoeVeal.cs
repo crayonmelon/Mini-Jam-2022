@@ -28,7 +28,7 @@ public class JoeVeal : MonoBehaviour
 
     private void Die()
     {
-        GameManager.GM.DestroyLevelEnemies();
+        GameManager.GM.DestroyLevelEnemies(GameManager.GM.currentLevel);
         anim.SetTrigger("Die");
         deathCam.enabled = true;
     }

@@ -85,11 +85,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    internal void DestroyLevelEnemies()
+    internal void DestroyLevelEnemies(int thisLevel)
     {
         foreach (var level in levels)
         {
-            if (level.ID == currentLevel)
+            if (level.ID == thisLevel)
             {
                 foreach (GameObject enemy in level.Enemies)
                 {
@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
 
     public void fallInToNextLevel()
     {
-        DestroyLevelEnemies();
+        DestroyLevelEnemies(currentLevel);
         currentLevel--;
         this.GetComponent<AudioSource>().PlayOneShot(fallingSfx);
         GameObject.FindWithTag("fallSprite").GetComponent<SpriteRenderer>().enabled = true;
@@ -136,6 +136,7 @@ public class GameManager : MonoBehaviour
         }
 
         EnablingAndDisabling();
+        DestroyLevelEnemies((currentLevel+1));
 
         GameObject.FindWithTag("Player").GetComponentInChildren<SpriteRenderer>().enabled = true;
     }
